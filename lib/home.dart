@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furnito/display.dart';
 import 'package:furnito/product.dart';
 import 'package:furnito/main.dart';
 
@@ -51,7 +52,7 @@ class _homeState extends State<home> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => login(),
+                          builder: (context) => display(),
                         ),
                       );
                     },
@@ -136,8 +137,9 @@ class _homeState extends State<home> {
                       width: MediaQuery.of(context).size.width * 0.5,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                            fit: BoxFit.fitHeight,
-                            image: AssetImage("image/ottoman.png"),),
+                          fit: BoxFit.fitHeight,
+                          image: AssetImage("image/ottoman.png"),
+                        ),
                       ),
                     ),
                   ),

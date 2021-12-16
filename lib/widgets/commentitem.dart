@@ -58,18 +58,33 @@ class detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.85,
-      color: Color.fromRGBO(3, 73, 73, 1),
-      child: Row(
-        children: [
-          Container(child: Image.asset("")),
-          Column(
-            children: [
-              Text(""),
-              Text(""),
-            ],
-          )
-        ],
+      height: MediaQuery.of(context).size.height * (1 / 6),
+      width: MediaQuery.of(context).size.width * 0.90,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(8),
+        color: Color.fromRGBO(238, 231, 211, 0.6),
+      ),
+      child: Container(
+        height: MediaQuery.of(context).size.height * (1 / 7),
+        width: MediaQuery.of(context).size.width * 0.85,
+        child: Row(
+          children: [
+            Container(
+                height: MediaQuery.of(context).size.height * (1 / 8),
+                width: MediaQuery.of(context).size.height * (1 / 8),
+                child: Image.asset(image)),
+            SizedBox(width: 10),
+            Container(
+              height: MediaQuery.of(context).size.height * (1 / 8),
+              child: Column(
+                children: [
+                  Text(heading,style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),),
+                  Text(description,style: TextStyle(fontSize: 15,fontWeight: FontWeight.w400)),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

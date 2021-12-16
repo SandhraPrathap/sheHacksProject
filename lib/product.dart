@@ -51,9 +51,12 @@ class _bedState extends State<product> {
             "       Dinner Table",
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w200),
           ),
-          Text(
-            "                                       \$199",
-            style: TextStyle(fontSize: 38, fontWeight: FontWeight.w600),
+          Padding(
+            padding: EdgeInsets.only(left:MediaQuery.of(context).size.width*(3/4)),
+            child: Text(
+              "\$199",
+              style: TextStyle(fontSize: 38, fontWeight: FontWeight.w600),
+            ),
           ),
           SizedBox(
             height: 20,
@@ -79,9 +82,12 @@ Show More....
             ),
           ),
           SizedBox(height: 20),
-          Text(
-            "          Comments",
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w300),
+          Padding(
+            padding: EdgeInsets.only(left: MediaQuery.of(context).size.width*(1/10)),
+            child: Text(
+              "Comments",
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w300),
+            ),
           ),
           SizedBox(
             height: 10,
