@@ -32,7 +32,7 @@ class display extends StatelessWidget {
               detail(
                   image: "image/dine.png",
                   heading: "Dining Table",
-                  description: '''jbknm mkljknlnl nknkl mfdgddddddddf'''),
+                  description: '''jbknm mkljknlnl nknkl df'''),
               SizedBox(
                 height: 20,
               ),
@@ -40,7 +40,7 @@ class display extends StatelessWidget {
                   image: "image/table.png",
                   heading: "IKEA Table",
                   description:
-                      '''Lorem ipsum dolor sit amit ... aslkfjalsjflka '''),
+                      '''Lorem ipsum dolor sit amit'''),
                       SizedBox(
                 height: 20,
               ),
@@ -48,7 +48,7 @@ class display extends StatelessWidget {
                   image: "image/table.png",
                   heading: "IKEA Table",
                   description:
-                      '''Lorem ipsum dolor sit amit ... aslkfjalsjflka '''),
+                      '''Lorem ipsum dolor sit amit'''),
                       SizedBox(
                 height: 20,
               ),
@@ -56,7 +56,7 @@ class display extends StatelessWidget {
                   image: "image/table.png",
                   heading: "IKEA Table",
                   description:
-                      '''Lorem ipsum dolor sit amit ... aslkfjalsjflka ''')
+                      '''Lorem ipsum dolor sit amit''')
             ],
           ),
         ),
