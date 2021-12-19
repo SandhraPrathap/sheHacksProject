@@ -1,4 +1,5 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
+import 'package:furnito/product.dart';
 
 class comment extends StatelessWidget {
   final int rating;
@@ -67,20 +68,61 @@ class detail extends StatelessWidget {
       child: Container(
         height: MediaQuery.of(context).size.height * (1 / 7),
         width: MediaQuery.of(context).size.width * 0.85,
-        child: Row(
+        child: Row(mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-                height: MediaQuery.of(context).size.height * (1 / 8),
-                width: MediaQuery.of(context).size.height * (1 / 8),
-                child: Image.asset(image)),
-            SizedBox(width: 10),
+              height: MediaQuery.of(context).size.height * (1 / 8),
+              width: MediaQuery.of(context).size.height * (1 / 8),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(image),
+                ),
+              )
+            ),
+            SizedBox(width: 20),
             Container(
               height: MediaQuery.of(context).size.height * (1 / 8),
-              child: Column(
-                children: [
-                  Text(heading,style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),),
-                  Text(description,style: TextStyle(fontSize: 15,fontWeight: FontWeight.w400)),
-                ],
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      heading,
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                    ),
+                    Text(description,
+                        style: TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.w400)),
+                    Container(
+                        width: 50,
+                        height: 30,
+                      
+                        margin: EdgeInsets.all(10),
+                        decoration:
+                            BoxDecoration(color: Color.fromRGBO(3, 73, 73, 1),),
+                        child: TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => product(),
+                                ),
+                              );
+                            },
+                            child: Center(
+                              child: Text(
+                                'View',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 12),
+                              ),
+                            ),
+                            style: TextButton.styleFrom(
+                                primary: Color.fromRGBO(62, 220, 220, 1)))),
+                  ],
+                ),
               ),
             )
           ],

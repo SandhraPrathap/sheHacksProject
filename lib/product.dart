@@ -36,8 +36,9 @@ class _bedState extends State<product> {
                   width: MediaQuery.of(context).size.width * 0.6,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                        fit: BoxFit.fitWidth,
-                        image: AssetImage("image/table.png")),
+                      fit: BoxFit.fitWidth,
+                      image: AssetImage("image/table.png"),
+                    ),
                   ),
                 ),
               ),
@@ -52,7 +53,8 @@ class _bedState extends State<product> {
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w200),
           ),
           Padding(
-            padding: EdgeInsets.only(left:MediaQuery.of(context).size.width*(3/4)),
+            padding: EdgeInsets.only(
+                left: MediaQuery.of(context).size.width * (3 / 4)),
             child: Text(
               "\$199",
               style: TextStyle(fontSize: 38, fontWeight: FontWeight.w600),
@@ -83,7 +85,8 @@ Show More....
           ),
           SizedBox(height: 20),
           Padding(
-            padding: EdgeInsets.only(left: MediaQuery.of(context).size.width*(1/10)),
+            padding: EdgeInsets.only(
+                left: MediaQuery.of(context).size.width * (1 / 10)),
             child: Text(
               "Comments",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w300),
